@@ -10,4 +10,6 @@ Front End:
 Back End:
 1. Ntokozo Gule
 2. Thabang Khoza
+
+Language to use and development environment
  
