@@ -18,8 +18,8 @@ Languages used for the project
 
 Introduction
 Plan is to have two databases one for the employer and one for the students/ candidates.
-The employer is going to feed the information of what they require the students/ candidates  to have in order to be eligible for an interview.
-The candidates themselves will also have to fill in a form, so that their information will be captured in a different database. And then as the last step, the web app will do the matching of the candidates to listed job description per criteria.
+The employer is going to feed the information of what they require the students/candidates to have in order to be eligible for an interview.
+The candidates themselves will also have to fill in forms, so that their information will be captured in a different database. And then as the last step, the web app will do the matching of the candidates to listed job description per criteria.
 
-The matching of the candidates and their respective job match will be matached using databases by linking the reletive keywords.
+The matching of the candidates and their respective job match will be matached using databases by linking the relative keywords.
  
