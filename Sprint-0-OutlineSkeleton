@@ -1,0 +1,72 @@
+Work than needs to be done by Wednesday the 8th of August 2018
+
+We basically do not want ot bore our clients by making them fill in long forms, instead we take them step by step per page
+
+1. The basic layout of the web. the prosective candidate's perspective (own database, first). meaning what each page entails and how it looks. 
+ 
+    Page 0 - Welcome/home page (no table)
+ 
+        a. Create account and specify type
+ 
+    Page 1 - Personal information (own table)
+ 
+        a. names (columns)
+        b. birth data and age (columns)
+        c. nationality (column)
+  
+    Page 2 - Educational background (own table).
+
+    Page 3 - Skills and experties (own table).
+
+    Page 4 - work experience (own table).
+
+    Page 5 - achivements (own table).
+
+    Page 6 - projects (own table).
+
+    Page 7 - interests (own table).
+    
+    Page 8 - job interest titles (own table).
+ 
+2. The basic layout of the web from the employer's perspective (own database, second). meaning what each page entails and how it looks.
+ 
+    Page 0 - Welcome/home page (no table)
+
+        a. create account and specify type
+
+    Page 1 - Employee company information (own table)
+
+        a. Company name (column)
+        b. Location (column)
+        c. Areas of interest of specialization (column)
+
+    Page 2 - Job listings (own table)
+
+        page 2a - Educational background required for this specified job (own 'sub-table' or even column).
+
+        page 2b - Skills and experties required for this specified job (own 'sub-table' or even column).
+
+        page 2c - minimum work experience required for this specified job (own 'sub-table' or even column).
+
+        page 2d - achivements adavatageous for this specified job (own 'sub-table' or even column).
+
+        page 2e - projects kinds adavatageous for this specified job (own 'sub-table' or even column).
+        
+        page 2f - Personal information required (table)
+        
+            a. Nationality
+            b. Age
+            c. Marital status
+            d. Idenity number
+        
+        page 2g - Employment type (column)
+        
+            a. Permanant
+            b. Temporary
+            c. Contract
+            
+        page 2h - Jobe title (column)
+        
+        page 2i -  Time for emplyment to begin (column)
+        
+        page 2j - interests (not actually necessary) (own 'sub-table').
