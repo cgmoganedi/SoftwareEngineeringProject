@@ -11,10 +11,11 @@ Back End:
 1. Ntokozo Gule
 2. Thabang Khoza
 
-Languages used for the project
+Languages and tools used for the project
 1. HTML, CSS3 for front end interfaces
 2. PHP for quering Databases
 3. MySQL for the actual Database
+4. Apache
 
 Introduction
 Plan is to have two databases one for the employer and one for the students/ candidates.
