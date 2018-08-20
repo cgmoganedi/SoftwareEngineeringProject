@@ -1,0 +1,85 @@
+<manifest alg="2" build="2015.2.0.352" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="jobs.com" resolutions="1x" timestamp="1534778336142">
+  <folder name="css">
+    <file name="site_global.css" crc="3916556066"/>
+    <file name="master_pagesmaster.css" crc="3800838555" ref="education:employee:achievments:student:index:bio:login:experienceandskills:apply:interests"/>
+    <file name="education.css" crc="240630595" ref="education"/>
+    <file name="employee.css" crc="46488381" ref="employee"/>
+    <file name="achievments.css" crc="240630595" ref="achievments"/>
+    <file name="student.css" crc="299251494" ref="student"/>
+    <file name="index.css" crc="174393033" ref="index"/>
+    <file name="bio.css" crc="240630595" ref="bio"/>
+    <file name="login.css" crc="198144995" ref="login"/>
+    <file name="experienceandskills.css" crc="240630595" ref="experienceandskills"/>
+    <file name="apply.css" crc="396215044" ref="apply"/>
+    <file name="interests.css" crc="240630595" ref="interests"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="312386352" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="museutils.js" crc="4155826306" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="whatinput.js" crc="86476730" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="museconfig.js" crc="483509463" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="pie.js" crc="3827607177" ref="index:apply:login"/>
+    <file name="jquery.musemenu.js" crc="3765356681" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="jquery.watch.js" crc="117772946" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="webpro.js" crc="4078243563" ref="index:apply:login"/>
+    <file name="musewpslideshow.js" crc="4115829919" ref="index:login"/>
+    <file name="jquery.museoverlay.js" crc="3936724022" ref="index:login"/>
+    <file name="touchswipe.js" crc="157639107" ref="index:login"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4034513494" ref="index:employee:student:apply"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="require.js" crc="228336483" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="form_check.php" crc="474517188" ref="apply"/>
+    <file name="form_throttle.php" crc="495784356" ref="apply"/>
+    <file name="form_process.php" crc="4149049960" ref="apply"/>
+    <file name="form-u953.php" crc="58530857" ref="apply"/>
+    <file name="form-u2750.php" crc="461382620" ref="login"/>
+  </folder>
+  <folder name="images">
+    <file name="u139-grad.png" crc="158057309" ref="index"/>
+    <file name="u145-grad.png" crc="3993528358" ref="index"/>
+    <file name="u144-4.png" crc="281574585" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="u142-grad.png" crc="373604919" ref="index"/>
+    <file name="favicon-icon.png" crc="90735106" seo="true" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="mail-grey.png" crc="470558007" seo="true" ref="index:employee:student:apply:login:education:experienceandskills:bio:interests:achievments"/>
+    <file name="janko-ferlic-174927-unsplash.jpg" crc="3904980551" seo="true" ref="index:login"/>
+    <file name="blank.gif" crc="4208392903" ref="index:login"/>
+    <file name="stefan-stefancik-257625-unsplash.jpg" crc="4202790456" seo="true" ref="index:login"/>
+    <file name="brian-cheng-739097-unsplash.jpg" crc="3771114957" seo="true" ref="index:login"/>
+    <file name="loading.gif" crc="3815509949" ref="index:login"/>
+    <file name="jobico.png" crc="3955891969" seo="true" ref="index"/>
+    <file name="employees-crop-u700.jpg" crc="210291322" ref="index"/>
+    <file name="girl_career-crop-u695.jpg" crc="3837386207" ref="index"/>
+    <file name="u926-grad.png" crc="4016898509" ref="index"/>
+    <file name="jobseekers-employers-match.png" crc="3789961952" ref="index"/>
+    <file name="u133-grad.png" crc="4065218117" ref="index"/>
+    <file name="1111.jpg" crc="139223455" ref="employee"/>
+    <file name="poster_manager.jpg" crc="3864796336" ref="student"/>
+    <file name="u3504-grad.png" crc="299889910" ref="apply"/>
+    <file name="u966-17.png" crc="247970590" ref="apply"/>
+    <file name="u966-17-r.png" crc="442086228" ref="apply"/>
+    <file name="u966-17-m.png" crc="525890370" ref="apply"/>
+    <file name="u966-17-fs.png" crc="258836642" ref="apply"/>
+    <file name="radiobuttonunchecked.png" crc="3976871150" ref="apply"/>
+    <file name="radiobuttonuncheckedrollover.png" crc="4276313674" ref="apply"/>
+    <file name="radiobuttonuncheckedmousedown.png" crc="54863585" ref="apply"/>
+    <file name="radiobuttonchecked.png" crc="4193302265" ref="apply"/>
+    <file name="radiobuttoncheckedrollover.png" crc="88928956" ref="apply"/>
+    <file name="radiobuttoncheckedmousedown.png" crc="4280357799" ref="apply"/>
+    <file name="u3417-grad.png" crc="4021041420" ref="login"/>
+    <file name="u2758-grad.png" crc="453499569" ref="login"/>
+    <file name="u2761-17.png" crc="4027274657" ref="login"/>
+    <file name="u2761-17-r.png" crc="3812083560" ref="login"/>
+    <file name="u2761-17-m.png" crc="494002430" ref="login"/>
+    <file name="u2761-17-fs.png" crc="302547728" ref="login"/>
+  </folder>
+  <file name="index.html" crc="482610097" seo="true" mt="1534777640954" redirect="true"/>
+  <file name="employee.html" crc="4289685405" seo="true" mt="1534777641237" redirect="true"/>
+  <file name="student.html" crc="4066064562" seo="true" mt="1534777641172" redirect="true"/>
+  <file name="apply.html" crc="4057602124" seo="true" mt="1534777551504" redirect="true"/>
+  <file name="login.html" crc="227666886" seo="true" mt="1534777462651" redirect="true"/>
+  <file name="education.html" crc="243178191" seo="true" mt="1534775039028" redirect="true"/>
+  <file name="experienceandskills.html" crc="3841571211" seo="true" mt="1534775159677" redirect="true"/>
+  <file name="bio.html" crc="3932342167" seo="true" mt="1534775017340" redirect="true"/>
+  <file name="interests.html" crc="367758520" seo="true" mt="1534775058912" redirect="true"/>
+  <file name="achievments.html" crc="131868250" seo="true" mt="1534775150135" redirect="true"/>
+</manifest>
