@@ -1,5 +1,0 @@
-1. Dynamically changing the form based on a radio button clicked
-2. Visual Presentation of the form
-3. Capturing and sharing the form data with the server
-4. Displaying the search results from the database in a presantable manner
-5. Dynamically capturing and changing the form soon as user clicks next
