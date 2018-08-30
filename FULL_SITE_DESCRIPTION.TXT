@@ -4,18 +4,20 @@
 
 This is an implementation of a prototype system for matching employers with job openings to prospective candidates with related skills. This system only matches prospective candidates to employers up to the interviw stage. The system is runs over tho web to facilitate this communication between employers and employees.
 
+What is required in the input forms are:
+
 1) Names
 2) Contact details
 3) Age and Date of birth
 4) Nationality
 5) Work experience is irrelevent
 6) Marital status is irrelevent
-7) Qualifications
+7) Qualifications and Education
 8) Hands on experience
 
 The job seeker (candidate employee) registers himself/herself on the Student site of the system over the net, he completes a form equivalent to what may be ideally on a Curriculum Vitae (CV).
 
-The job offer (employer) registers his or her company and then lists the jobs that he/she has to offer, cleary stating the
+The job offer (employer) registers his or her company and then lists the jobs that he/she has to offer, cleary stating the:
 
 1) Job position title
 2) Job qualification requirements
