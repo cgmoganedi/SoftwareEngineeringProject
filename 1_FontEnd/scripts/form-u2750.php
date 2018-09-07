@@ -38,14 +38,14 @@ $form = array(
 				'required' => 'Field \'Username\' is required.'
 			)
 		),
-		'Email' => array(
+		'Password' => array(
 			'order' => 2,
-			'type' => 'email',
-			'label' => 'Email',
+			'type' => 'password',
+			'label' => 'Password',
 			'required' => true,
 			'errors' => array(
-				'required' => 'Field \'Email\' is required.',
-				'format' => 'Field \'Email\' has an invalid email.'
+				'required' => 'Field \'Password\' is required.',
+				'format' => 'Field \'Password\' has an invalid input.'
 			)
 		)
 	)
