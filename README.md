@@ -8,7 +8,7 @@ The system evaluates some matric (in a form of percentage of match) of the appli
 
 Front-end:
 1. Chuba G. Moganedi
-2. Sammy Makwana
+2. Sammy Maakwana
 
 Back-end:
 1. Ntokozo Gule
