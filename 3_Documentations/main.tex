@@ -1,0 +1,262 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkClassInstructor} % Top left header
+\rhead{\hmwkClass} % Top center header
+%\chead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{System Requirements Specifications} % Assignment title
+\newcommand{\hmwkDueDate}{Friday,\ August\ 31,\ 2018} % Due date
+\newcommand{\hmwkClass}{COMS3002} % Course/class
+\newcommand{\hmwkClassTime}{} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Employer-Student Job Matching System} % Teacher/ made it title
+\newcommand{\hmwkAuthorName}{Chuba G. Moganedi, Sammy Makwana, Ntokozo Gule, Thabang Khoza} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+
+\begin{homeworkProblem}[1. Introduction]
+\begin{homeworkSection}{Purpose and Motivation} %/ use this block to create subsections
+When student graduate out of university, they are faced with the challenges of facing a new environment of fending for themselves and that starts with finding the right job that actually needs them. Employees are also faced with the challenge of finding the suitable candidates for vacant job position without spending to much time searching around manually by themselves in whatever way accessible to them. Basically with this system we are simply bringing the new graduates into the face of employers so that the right candidate can then be interviewed, just a call away.	
+\end{homeworkSection}
+
+\begin{homeworkSection}{System Features and Perceived Users}
+Main feature: 
+\begin{enumerate}
+\item Allows graduates to upload information about their qualifications
+\item Allow employees to list jobs currently available
+\end{enumerate}
+When it comes to users, there are basically two groups:
+\begin{enumerate}
+\item The employers and
+\item The job-seekers/students/graduates
+\end{enumerate}
+The two user groups have two problems than that can be put together to form a coherent solution as per purpose states above. Each get to make their profile and host it on the site. Now, to reach for the purpose as stated in the introduction, the graduate simply creates and account and log into the system, soon as he's logged in he then fills in forms about his/her skills and qualifications. That information gets captured and stored into a database. The employer also creates an account for his business then soon as he has a vacant job and needs a fresh graduate to fill it, he then simply logs into his account and list the details of that jobs. Our algorithms then run through the job-seeker database and returns the best matching candidate to the employer's page, if there is such a candidate. Just like the job-seeker (graduate), the job offer (employee) does not have to do any search of any kind, he simply lists the job and our algorithms take care of the rest and magically gives him the details of the best matching candidate.
+
+\end{homeworkSection}
+
+\begin{homeworkSection}{Product Scope and Proposed architecture}
+The {\it Employer-Student Matching System} is an online application site that automatically give best candidates of a vacant job to the employer listed the job on the site. It does not tell the job-seeker what jobs are already listed nor does it list to the employer all job-seekers on the site. The employer can only see profile of the best matched candidate(s) if there is one and all the job-seeker can do is give details about his profile. The biggest benefit is no party gets to search on their own. The system brings them together on its own. It is basically a three-tier client-server architecture system. On the client side, there are two distinct groups of users, the first is the employer and the second is the job-seeker, what brings them together is the database they share on the server.
+\end{homeworkSection}
+	
+\begin{homeworkSection}{Definitions of terms and Projected Resources}
+\begin{itemize}
+\item\textbf{Three-tier client-server architecture} : System Architecture that will define three logically independent tiers, namely, Presentation, Data management and Domain logic.
+\item\textbf{Employer} : This refers to a company representative that adds the company profile and list jobs on the site as they become vacant.
+
+\item\textbf{Job-seeker/student/graduate/candidate} : This terms are used interchangeably in the text and they are used to refer to the recent graduate that is seeking to find employment.
+
+\item\textbf{MySQL} : An open source relational database management system used to store, manage and retrieve records of both the job-seeker as well as the job offerer who in this case is called the employer.
+
+\item\textbf{Adobe Muse} : A proprietary software that makes it rather easier to design and develop website at the same time.
+
+\item\textbf{XAMPP} : Stands for Cross-Platform (X), Apache (A), MariaDB (M), PHP (P) and Perl (P). It is a simple, lightweight Apache distribution that makes it easy for developers to create a local web server for testing and deployment purposes. Everything needed to set up a web server – server application (Apache), database (MariaDB), and scripting language (PHP) – is included in an extractable file. XAMPP is also cross-platform, which means it works equally well on Linux, Mac and Windows. Since most actual web server deployments use the same components as XAMPP, it makes transitioning from a local test server to a live server extremely easy as well..
+
+\item\textbf{Apache} : The Apache HTTP Server, colloquially called Apache, is a free and open-source cross-platform web server, released under the terms of Apache License 2.0. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation. 
+
+\item\textbf{PHP} : Hypertext Preprocessor (or simply PHP) is a server-side scripting language designed for Web development, but also used as a general-purpose programming language.
+
+\item\textbf{CSS} : Cascading Style Sheets, is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. 
+
+\item\textbf{HTML} : Hypertext Markup Language, is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.
+
+\item\textbf{JavaScript} : is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm..
+
+\item\textbf{JSON} : JavaScript Object Notation, is an open-standard file format that uses human-readable text to transmit data objects between server-side and and front-end site of a web application, it consisting of attribute–value pairs and array data types.
+\end{itemize}
+\end{homeworkSection}
+
+\begin{homeworkSection}{References}
+\begin{enumerate}
+\item{IEEE Recommended Practice for Software Requirements Specifications by Software Engineering Standards Committee}
+\item{Stephens, R, (2015), Beginning Software Engineering, Wiley.}
+\item{Web Apache site - https://www.apachefriends.org/index.html}
+\item{Standardization page of the Web - https://www.w3.org/html/}
+\end{enumerate}
+\end{homeworkSection}
+
+\begin{homeworkSection}{Overview}
+\textbf{Existing System:}
+\begin{itemize}
+\item{Registration for the users both students and employers.}
+\item{Profile view page for the students.}
+\item{Page view for the employer.}
+\end{itemize}
+\textbf{Drawbacks:}
+\begin{itemize}
+\item{Locally hosted for now.}
+\item{The system only uses only English.}
+\item{No web camera interaction or direct interaction of any kind.}
+\item{Students without Internet connection cannot use the system.}
+\end{itemize}
+\textbf{Proposed System:}
+\begin{itemize}
+\item{Registration for students and employers.}
+\item{Website can be extended to suggest jobs for the students with regards to their field of study.}
+\item{Website will match the students with the employer that offers the jobs that the student wants.}
+\end{itemize}
+\textbf{Our Plan:}
+\begin{itemize}
+\item{Registration for students and employers (both user groups).}
+\item{Online matching of student and employer.}
+\item{Allow employer a profile view of the matched students.}
+\item{Make it easier for the employer to contact the matched student.}
+\end{itemize}
+\end{homeworkSection}
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[2. Overall Description]
+\begin{homeworkSection}{Product perspective} %/ use this block to create subsections
+Still working on it.
+\end{homeworkSection}
+	
+\begin{homeworkSection}{Product functions} %/ use this block to create subsections
+\begin{itemize}
+\item one
+\item two
+\item three
+\item four
+\item five
+\item six
+\item seven 
+\end{itemize}
+\end{homeworkSection}
+\begin{homeworkSection}{User Classes and Characteristics} %/ use this block to create 		subsections
+From the student side, any graduate with sufficient computer proficiency can use the system. And if you are an employer then we can assume you are literate enough to access and use computer Internet resources, especially just filling out a form, this goes well for the job-seeker. 
+\textbf{Software Interface}
+Client on Internet
+Web Browser (any web browser), Operating System (any operating system) 
+
+Client on Intranet
+Web Browser (any web browser), Operating System (any operating system) 
+
+Web Server
+Apache, Operating System (any operating system) 
+
+Data Base Server
+MySQL, Operating System (any operating system) 
+
+Development End
+XAMPP (Apache, MySQL), myphpadmin, OS (Windows), HTML, PHP, JAVASCRIPT 
+
+ \end{homeworkSection}
+	
+\end{homeworkProblem}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
