@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Job Match - Biography</title>
+    <title>Job Match - Achievements and Highlights</title>
     <link rel="stylesheet" href="../../assets/tether/tether.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-grid.min.css">
@@ -12,17 +12,23 @@
 </head>
 <body>
 
-<form method="post" action="../php/biography.php" style="border:1px solid #ccc">
+<form method="post" action="../php/achievements.php" style="border:1px solid #ccc">
     <div class="container">
-        <h1>Biography</h1>
-        <p>What would you like potential employers to know about you?</p>
+        <h1>Achievements</h1>
+        <p>What are your highlights?</p>
         <hr>
 
-        <label for="bio"><b>About You</b></label>
-        <input class="bio" placeholder="About You" id="bio" name="usr_bio" required>
+        <label for="achievement"><b>Achievement</b></label>
+        <input type="text" placeholder="What was your achievement" id="achievement" name="achievement" required>
+
+        <label for="achievement_desc"><b>Achievement Description</b></label>
+        <input type="text" placeholder="What made it so special?" id="achievement_desc" name="achievement_desc" required>
+
+        <label for="achievement_yr"><b>Year Obtained</b></label>
+        <input type="text" placeholder="When was this special time?" id="achievement_yr" name="achievement_yr" required>
 
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Update Bio</button>
+            <button type="submit" class="signupbtn">Update Achievements</button>
         </div>
     </div>
 </form>

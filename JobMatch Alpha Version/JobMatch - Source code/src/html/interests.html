@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Job Match - Biography</title>
+    <title>Job Match - Interests</title>
     <link rel="stylesheet" href="../../assets/tether/tether.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-grid.min.css">
@@ -12,17 +12,20 @@
 </head>
 <body>
 
-<form method="post" action="../php/biography.php" style="border:1px solid #ccc">
+<form method="post" action="../php/interests.php" style="border:1px solid #ccc">
     <div class="container">
-        <h1>Biography</h1>
-        <p>What would you like potential employers to know about you?</p>
+        <h1>Interests</h1>
+        <p>What gets you excited?</p>
         <hr>
 
-        <label for="bio"><b>About You</b></label>
-        <input class="bio" placeholder="About You" id="bio" name="usr_bio" required>
+        <label for="interest"><b>Interest</b></label>
+        <input type="text" placeholder="What do you love?" id="interest" name="usr_intrst" required>
+
+        <label for="clbs"><b>Clubs and Societies</b></label>
+        <input type="text" placeholder="What club are you involved in?" id="clbs" name="usr_clbs" required>
 
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Update Bio</button>
+            <button type="submit" class="signupbtn">Update Interests</button>
         </div>
     </div>
 </form>

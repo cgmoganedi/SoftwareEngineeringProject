@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Edit Personal Info</title>
+    <title>Job Match - Edit Academic Info</title>
     <link rel="stylesheet" href="../../assets/tether/tether.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-grid.min.css">
@@ -12,17 +12,17 @@
 </head>
 <body>
 
-<form method="post" action="../php/personal.php" style="border:1px solid #ccc">
+<form method="post" action="../php/academic_info.php" style="border:1px solid #ccc">
     <div class="container">
-        <h1>Personal Infomation</h1>
-        <p>Tell is a little bit about yourself.</p>
+        <h1>Academic Infomation</h1>
+        <p>What have you been studying?</p>
         <hr>
 
         <label for="inst"><b>Institution</b></label>
         <input type="text" placeholder="Enter Institution Name" id="inst" name="usr_inst" required>
 
         <label for="qualname"><b>Qualification Name</b></label>
-        <input type="text" placeholder="Enter Qualification" id="qualname" name="usr_qualname" required>
+        <input type="text" placeholder="Enter Qualification Name" id="qualname" name="usr_qualname" required>
 
         <label for="qualfld"><b>Qualification Field</b></label>
         <input type="text" placeholder="Enter Qualification Field" id="qualfld" name="usr_qualfld" required>
@@ -39,17 +39,8 @@
         <label for="grd_scle"><b>Grade Scale</b></label>
         <input type="text" placeholder="Enter Grade Scale" id="grd_scle" name="usr_grd_scle" required>
 
-        <label for="gender"><b>Gender</b></label>
-        <input type="text" placeholder="Enter Gender" id="gender" name="usr_gndr" required>
-
-        <label for="race"><b>Race</b></label>
-        <input type="text" placeholder="Enter Race" id="race" name="usr_race" required>
-
-        <label for="city"><b>City</b></label>
-        <input type="text" placeholder="Enter City" id="city" name="usr_city" required>
-
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Update Personal Info</button>
+            <button type="submit" class="signupbtn">Update Academic Info</button>
         </div>
     </div>
 </form>
