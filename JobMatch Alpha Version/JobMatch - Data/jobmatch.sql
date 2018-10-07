@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2018 at 12:00 AM
+-- Generation Time: Oct 07, 2018 at 03:30 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -37,6 +37,35 @@ CREATE TABLE `academic_info` (
   `Completion_Date` varchar(20) NOT NULL,
   `Academic_Average` varchar(7) NOT NULL,
   `Grade_Scale` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `companies`
+--
+
+CREATE TABLE `companies` (
+  `ID` int(11) NOT NULL,
+  `Company_Name` varchar(30) NOT NULL,
+  `Company_Email` varchar(67) NOT NULL,
+  `Company_Number` varchar(10) NOT NULL,
+  `Company_Province` varchar(20) NOT NULL,
+  `Company_Country` varchar(20) NOT NULL,
+  `Company_City` varchar(15) NOT NULL,
+  `Company_Website` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job_postings`
+--
+
+CREATE TABLE `job_postings` (
+  `ID` int(11) NOT NULL,
+  `Job_Title` varchar(34) NOT NULL,
+  `Job_Description` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -76,7 +105,8 @@ CREATE TABLE `personal_info` (
 --
 
 INSERT INTO `personal_info` (`ID`, `Title`, `Name`, `Surname`, `Country`, `Date_of_Birth`, `Id_Num`, `Email`, `Marital_Status`, `Gender`, `Race`, `City`) VALUES
-(6, 'Mr', 'John', 'Carter', 'South Africa', '05-April-2018', '1234567890123', '', '', 'Male', 'Indian', 'Jozi');
+(6, 'Mr', 'Garfield', 'Carter', 'South Africa', '05-April-2018', '1234567890123', '', '', 'Male', 'Black', 'Durban'),
+(8, 'Prof', 'Garfield', 'Cudi', 'South Africa', '16-Jan-1997', '1234567890144', 'Garfield@gmail.com', '', 'Male', 'Black', 'Jozi');
 
 -- --------------------------------------------------------
 
@@ -124,7 +154,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`ID`, `Email`, `Password`, `Name`) VALUES
 (6, 'john@gmail.com', 'man', 'John'),
-(7, 'john1@gmail.com', 'man', 'JC');
+(7, 'john1@gmail.com', 'man', 'JC'),
+(8, 'Garfield@gmail.com', 'man', 'Garfield');
 
 -- --------------------------------------------------------
 
@@ -159,7 +190,7 @@ CREATE TABLE `user_biographies` (
 CREATE TABLE `user_interests` (
   `ID` int(11) NOT NULL,
   `Interest` varchar(20) NOT NULL,
-  `Club&Societies` varchar(10) NOT NULL
+  `Club_Societies` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -182,6 +213,18 @@ CREATE TABLE `user_skills` (
 --
 ALTER TABLE `academic_info`
   ADD KEY `academic_info_users_ID_fk` (`ID`);
+
+--
+-- Indexes for table `companies`
+--
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `job_postings`
+--
+ALTER TABLE `job_postings`
+  ADD KEY `job_postings_companies_ID_fk` (`ID`);
 
 --
 -- Indexes for table `majors`
@@ -242,10 +285,16 @@ ALTER TABLE `user_skills`
 --
 
 --
+-- AUTO_INCREMENT for table `companies`
+--
+ALTER TABLE `companies`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -256,6 +305,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `academic_info`
   ADD CONSTRAINT `academic_info_users_ID_fk` FOREIGN KEY (`ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `job_postings`
+--
+ALTER TABLE `job_postings`
+  ADD CONSTRAINT `job_postings_companies_ID_fk` FOREIGN KEY (`ID`) REFERENCES `companies` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `majors`
