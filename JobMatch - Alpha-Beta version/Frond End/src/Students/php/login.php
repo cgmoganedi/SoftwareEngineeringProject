@@ -17,22 +17,22 @@ $company_result = $conn->query($company_sql);
 
 if ($student_result->num_rows == 1)
 {
-    while($row = $result->fetch_assoc())
+    while($row = $student_result->fetch_assoc())
     {
         $output[] = $row;
         session_start();
         $_SESSION['UserID'] = $output[0]['ID'];
-        header('Location: /JobMatch/src/php/student-home.php');
+        header('Location: /JobMatch/src/Students/php/student-home.php');
     }
 }
 elseif($company_result->num_rows == 1)
 {
-    while($row = $result->fetch_assoc())
+    while($row = $company_result->fetch_assoc())
     {
         $output[] = $row;
         session_start();
         $_SESSION['UserID'] = $output[0]['ID'];
-        header('Location: /JobMatch/src/php/company-home.php');
+        header('Location: /JobMatch/src/Companies/php/company-home.php');
     }
 }
 else

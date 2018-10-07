@@ -26,7 +26,7 @@ if ($result->num_rows > 0)
 
     if ($conn->query($sql) === TRUE) {
         $conn->close();
-        header('Location: /JobMatch/src/php/student-home.php');
+        header('Location: /JobMatch/src/Students/php/student-home.php');
         exit();
     }
     else {
@@ -38,7 +38,7 @@ else{
 
     if ($conn->query($sql) === TRUE) {
         $conn->close();
-        header('Location: /JobMatch/src/php/student-home.php');
+        header('Location: /JobMatch/src/Students/php/student-home.php');
         exit();
     }
     else {

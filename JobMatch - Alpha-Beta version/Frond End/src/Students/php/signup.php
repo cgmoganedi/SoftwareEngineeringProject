@@ -26,7 +26,7 @@ else
 
     if ($conn->query($sql) === TRUE) {
         $conn->close();
-        header('Location: /JobMatch/src/html/login.html');
+        header('Location: /JobMatch/src/Students/html/login.html');
         exit();
     }
     else {
