@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0)
 {
-    $sql = "UPDATE user_skills SET Skill = '.$usr_skill.' WHERE user_skills.ID = '.$ID";
+    $sql = "UPDATE user_skills SET Skill = '$usr_skill.' WHERE user_skills.ID = '$ID'";
 
     if ($conn->query($sql) === TRUE) {
         $conn->close();

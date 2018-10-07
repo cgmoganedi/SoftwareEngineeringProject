@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2018 at 07:46 PM
+-- Generation Time: Oct 07, 2018 at 11:46 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -45,7 +45,8 @@ CREATE TABLE `academic_info` (
 
 INSERT INTO `academic_info` (`ID`, `Institution`, `Qualification_Description`, `Qualification_Field`, `Start_Date`, `Completion_Date`, `Academic_Average`, `Grade_Scale`) VALUES
 (6, 'Wits', 'BSc Mathematics', 'Mathematics', '2018-01-12', '2018-11-30', '56%', 'percentage'),
-(10, 'Wits', 'Bsc Mathematics', 'Mathematics', '2018-01-12', '2018-11-30', '45%', 'percentage');
+(10, 'Wits', 'Bsc Mathematics', 'Mathematics', '2018-01-12', '2018-11-30', '45%', 'percentage'),
+(11, 'Uj', 'BSc Mathematics', 'Science', '2018-01-12', '2018-11-30', '20%', 'percentage');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,8 @@ CREATE TABLE `companies` (
 
 INSERT INTO `companies` (`ID`, `Email`, `Name`, `Password`) VALUES
 (1, 'google@gmail.com', 'Google', 'man'),
-(2, 'microsoft@outlook.com', 'Microsoft', 'man');
+(2, 'microsoft@outlook.com', 'Microsoft', 'man'),
+(3, 'mjomaneadmin@gmail.com', 'Mjomane Inc', 'mjo');
 
 -- --------------------------------------------------------
 
@@ -91,7 +93,8 @@ CREATE TABLE `company_info` (
 
 INSERT INTO `company_info` (`ID`, `Company_Name`, `Company_Email`, `Company_Number`, `Company_Province`, `Company_Country`, `Company_City`, `Company_Website`) VALUES
 (1, 'Google Maps', 'google@gmail.com', '0118902343', 'Namif', 'South Somalia', 'Mani', 'googlemaps.com'),
-(2, 'Microsoft', 'microsoft@outlook.com', '1234567890', 'Nami', 'South Sudan', 'Mani', 'google.com');
+(2, 'Microsoft', 'microsoft@outlook.com', '1234567890', 'Nami', 'South Sudan', 'Mani', 'google.com'),
+(3, 'mjo', 'mjomaneadmin@gmail.com', '1234567890', 'Nami', 'BRASIL', 'RIO', 'MJO.COM');
 
 -- --------------------------------------------------------
 
@@ -110,7 +113,7 @@ CREATE TABLE `job_postings` (
 --
 
 INSERT INTO `job_postings` (`ID`, `Job_Title`, `Job_Description`) VALUES
-(1, 'Coder', 'The candidate will be making websites.\r\n\r\nSkills:\r\nCoding\r\nWriting\r\nPresenting\r\n\r\nEducation\r\nCandidate must have done:\r\nArts\r\nAnthropology\r\nHistory \r\nComputer Science\r\nHospitality studies');
+(1, 'Coder', 'The candidate will be making websites.\r\n\r\nSkills:\r\nCoding\r\nWriting\r\nPresenting\r\n\r\nEducation\r\nCandidate must have done one of the following:\r\nArts\r\nAnthropology\r\nHistory \r\nComputer Science\r\nHospitality studies');
 
 -- --------------------------------------------------------
 
@@ -135,7 +138,8 @@ INSERT INTO `majors` (`ID`, `Major`) VALUES
 (6, 'Applied Mathematics'),
 (6, 'Statistics'),
 (10, 'Hospitality studies'),
-(10, 'History');
+(10, 'History'),
+(11, 'Coding');
 
 -- --------------------------------------------------------
 
@@ -165,7 +169,8 @@ CREATE TABLE `personal_info` (
 INSERT INTO `personal_info` (`ID`, `Title`, `Name`, `Surname`, `Country`, `Date_of_Birth`, `Id_Num`, `Email`, `Marital_Status`, `Gender`, `Race`, `City`) VALUES
 (6, 'Mr', 'Jomoman', 'khula', 'South Afrika', '1996-12-04', '1234567890123', 'jomo@gmail.com', '', 'Male', 'Black', 'rooftop'),
 (8, 'Prof', 'Garfield', 'Cudi', 'South Africa', '16-Jan-1997', '1234567890144', 'Garfield@gmail.com', '', 'Male', 'Black', 'Jozi'),
-(10, 'Mr', 'Jomo', 'Carter', 'South Afrika', '1996-12-04', '1234567890123', 'jomo@gmail.com', '', 'Male', 'Black', 'Diepkloof');
+(10, 'Mr', 'Jomo', 'Carter', 'South Afrika', '1996-12-04', '1234567890123', 'jomo@gmail.com', '', 'Male', 'Black', 'Diepkloof'),
+(11, 'Mr', 'Mzulu', 'khula', 'South Afrika', '1996-12-04', '1234567890123', 'mzulu@gmail.com', '', 'Male', 'Black', 'Soweto');
 
 -- --------------------------------------------------------
 
@@ -188,7 +193,8 @@ CREATE TABLE `professional_experience` (
 --
 
 INSERT INTO `professional_experience` (`ID`, `Organisation`, `Country`, `Position`, `Start_Date`, `End_Date`, `Type_of_Involvement`) VALUES
-(6, 'Google', 'USA', '', '2018-12-14', '2020-01-05', 'Im not sur');
+(6, 'Google', 'USA', '', '2018-12-14', '2020-01-05', 'Im not sur'),
+(11, 'Google', 'USA', '', '2018-12-14', '2020-01-05', 'Im not sure');
 
 -- --------------------------------------------------------
 
@@ -222,8 +228,8 @@ INSERT INTO `users` (`ID`, `Email`, `Password`, `Name`) VALUES
 (6, 'john@gmail.com', 'man', 'John'),
 (7, 'john1@gmail.com', 'man', 'JC'),
 (8, 'Garfield@gmail.com', 'man', 'Garfield'),
-(9, '', '', ''),
-(10, 'jomo@gmail.com', 'cat', 'Jomo');
+(10, 'jomo@gmail.com', 'cat', 'Jomo'),
+(11, 'mzulu@gmail.com', 'mzulu', 'Mzulu');
 
 -- --------------------------------------------------------
 
@@ -254,7 +260,8 @@ CREATE TABLE `user_biographies` (
 --
 
 INSERT INTO `user_biographies` (`ID`, `User_Bio`) VALUES
-(6, 'I am a great guy but have depression and anger issues. I work best on drugs and I love being with my pet beetle, jimi.');
+(6, 'I am a great guy but have depression and anger issues. I work best on drugs and I love being with my pet beetle, jimi.'),
+(11, 'I am a great guy but have depression and anger issues. I work best on drugs and I love being with my pet beetle, jimi.He likes cheetos. ');
 
 -- --------------------------------------------------------
 
@@ -273,7 +280,8 @@ CREATE TABLE `user_interests` (
 --
 
 INSERT INTO `user_interests` (`ID`, `Interest`, `Club_Societies`) VALUES
-(6, 'Thinking about the universe', 'The Lonely Stoners Club');
+(6, 'Thinking about the universe', 'The Lonely Stoners Club'),
+(11, 'Thinking about the universe and jimi', 'The Lonely Stoners Club');
 
 -- --------------------------------------------------------
 
@@ -297,7 +305,8 @@ INSERT INTO `user_skills` (`ID`, `Skill`) VALUES
 (6, 'presenting'),
 (8, 'writing'),
 (8, 'accounting'),
-(7, 'eating');
+(7, 'eating'),
+(11, 'Fighting.');
 
 --
 -- Indexes for dumped tables
@@ -389,19 +398,19 @@ ALTER TABLE `user_skills`
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `company_info`
 --
 ALTER TABLE `company_info`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables

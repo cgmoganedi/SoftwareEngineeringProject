@@ -48,25 +48,22 @@ foreach ($majors as $item) {
 }
 
 //students matching on skills
-$s_m_m = array(); //s m m = students matching by majors
-foreach ($matching_majors as $item){
-    $m_m_q = $conn->query("SELECT ID FROM majors where Major = '$item'"); //m m q = matching majors query
-
-    while($row = $m_m_q->fetch_assoc()) {
-        array_push($s_m_m, $row['ID']);
-    }
-}
-
-print_r($s_m_m);
-
-$s_m_m_n = array(); //s m m = students matching by majors by names
-foreach ($s_m_m as $item){
-    $m_m_q = $conn->query("SELECT Name FROM users where ID = '$item'"); //m m q = matching majors query
-
-    while($row = $m_m_q->fetch_assoc()) {
-        array_push($s_m_m_n, $row['Name']);
-    }
-}
+$s_m_m = Match($matching_majors,$conn,'ID','majors','Major');
+//s m m = students matching by majors by names
+$s_m_m_n = Match($s_m_m,$conn,'Name','users','ID');
 
 print_r(array_unique($s_m_m_n));
 
+function Match($data_array, $connection, $required_field, $table, $data_field)
+{
+    $result_array = array();
+    foreach ($data_array as $item){
+        $sql = "SELECT ".$required_field." FROM ".$table." WHERE ".$data_field." = '$item'";
+        $m_m_q = mysqli_query($connection,$sql);
+
+        while($row =  mysqli_fetch_assoc($m_m_q)) {
+            array_push($result_array, $row[$required_field]);
+        }
+    }
+    return $result_array;
+}
