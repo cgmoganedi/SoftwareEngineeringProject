@@ -1,8 +1,10 @@
 <?php
 include_once 'connection.php';
 include_once 'things.php';
+include_once 'company_data.php';
 
-$recs = Query3('User_name','matches',$_SESSION['UserID'],$conn);
+$recs = Query3('User_name','matches', $man,$conn);
+
 ?>
 <!DOCTYPE html>
 <html >

@@ -4,6 +4,7 @@ include_once 'connection.php';
 include_once 'things.php';
 session_start();
 //company info
+$man = $_SESSION['UserID'];
 $name = Query('Name','companies',$_SESSION['UserID'],$conn);
 $email = Query('Company_Email','company_info',$_SESSION['UserID'],$conn);
 $num = Query('Company_Number','company_info',$_SESSION['UserID'],$conn);

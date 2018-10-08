@@ -21,4 +21,7 @@ After cloning the whole project into your system:
 -Then goto source folder named "src".
 -the finally launch the "index.html" file to start navigating the website.
 -And lastly enjoy the beautiful website for matching students with their future emoployers.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d7b4191d1851d4ab2abfe75df5429b114781778
