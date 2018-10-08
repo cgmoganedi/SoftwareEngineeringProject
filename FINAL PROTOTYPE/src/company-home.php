@@ -6,6 +6,7 @@ include_once 'company_data.php';
 <!DOCTYPE html>
 <html >
 <head>
+  <!-- Site made with Mobirise Website Builder v4.8.4, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
@@ -56,7 +57,7 @@ include_once 'company_data.php';
                         <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>Home<br><br></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://google.com">
+                    <a class="nav-link link text-white display-4" href="https://mobirise.com">
                         </a>
                 </li></ul>
             
@@ -64,7 +65,7 @@ include_once 'company_data.php';
     </nav>
 </section>
 
-<section class="engine"><a href="https://google.info/v">html templates</a></section><section class="cid-r5SVR3FrFr mbr-fullscreen mbr-parallax-background" id="header2-5">
+<section class="engine"><a href="https://mobirise.info/v">html templates</a></section><section class="cid-r5SVR3FrFr mbr-fullscreen mbr-parallax-background" id="header2-5">
 
     
 

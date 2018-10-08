@@ -4,6 +4,7 @@ include_once 'things.php';
 include_once 'company_data.php';
 
 $recs = Query3('User_name','matches', $man,$conn);
+$recs_id = Query3('User','matches',$man,$conn);
 
 ?>
 <!DOCTYPE html>
@@ -78,8 +79,26 @@ $recs = Query3('User_name','matches', $man,$conn);
             <div class="mbr-white col-md-10">
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">Recommended Students</h1>
                 <?php
+                $cont = 0;
+
                     foreach ($recs as $item) {
-                        echo "<p class='mbr-text pb-3 mbr-fonts-style display-5'>" . $item . "</p>";
+                        echo "<p class='mbr-text pb-3 mbr-fonts-style display-5' style='color: #0069d9'> Candidate Name </p>";
+                        echo "<p class='mbr-text pb-3 mbr-fonts-style display-5'>". $item . "</p>";
+
+                        $candidate_majors = Query4('Major','majors',$recs_id[$cont],$conn);
+
+                        echo "<p class='mbr-text pb-3 mbr-fonts-style display-5n' style='color: #e83e8c'> Candidate Majors </p>";
+
+                        foreach ($candidate_majors as $idd)
+                        {
+                            echo "<p class='mbr-text pb-3 mbr-fonts-style display-5'>". $idd . "</p>";
+                        }
+
+                        $candidate_email = Query('Email','users',$recs_id[$cont],$conn);
+                        echo "<p class='mbr-text pb-3 mbr-fonts-style display-5' style='color: #6f42c1'> Candidate Email </p>";
+                        echo "<p class='mbr-text pb-3 mbr-fonts-style display-5'>". $candidate_email . "</p>";
+
+                        $cont += 1;
                     }
                 ?>
 
