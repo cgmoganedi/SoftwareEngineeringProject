@@ -17,7 +17,7 @@ Back-end:
 Languages and tools used for the project
 1. Adobe Muse, PHP, HTML, CSS3 for front end interfaces
 2. PHP for form validation, quering databases and computing the match
-3. MySQL for the actual database
+3. MySQL for the actual database and phpmyadmin
 4. Apache Server
 5. JSON for communication between the front-end and back-end
 6. PHPstorm 
