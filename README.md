@@ -1,3 +1,5 @@
+FINAL PROJECT IS IN THE FINAL PROTOTYPE FOLDER!!!
+
 # SoftwareEngineeringProject
 
 Wits University COMS3002 - Software Engineering Project
