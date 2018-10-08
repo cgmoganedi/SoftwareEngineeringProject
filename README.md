@@ -20,6 +20,8 @@ Languages and tools used for the project
 3. MySQL for the actual database
 4. Apache Server
 5. JSON for communication between the front-end and back-end
+6. PHPstorm 
+7. XAMPP
 
 Introduction
 Plan is to have two databases one for the employer and one for the students/ candidates.
