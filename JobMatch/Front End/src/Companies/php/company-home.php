@@ -48,7 +48,7 @@ $job_desc = Query('Job_Description','job_postings',$_SESSION['UserID'],$conn);
     <p>Company_Website</p>
     <p><?php echo $website?></p>
 </div>
-<form action="../html/company-info.html">
+<form action="company-info-form.php">
     <input type="submit" value="Edit Company Info" />
 </form>
 

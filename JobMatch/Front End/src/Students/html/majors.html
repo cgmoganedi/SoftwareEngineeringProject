@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Job Match - Post Job</title>
+    <title>Job Match - Add Major</title>
     <link rel="stylesheet" href="../../../assets/tether/tether.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap-grid.min.css">
@@ -12,21 +13,21 @@
 </head>
 <body>
 
-<form method="post" action="../php/job-post.php" style="border:1px solid #ccc">
+<form method="post" action="../php/major.php" style="border:1px solid #ccc">
     <div class="container">
-        <h1>Post Job</h1>
-        <p>What do we want? Jobs! When do we want them? Now! </p>
+        <h1>Add Major</h1>
+        <p>What are your majors?</p>
         <hr>
 
-        <label for="job_ttle"><b>Job Title</b></label>
-        <input type = "text" placeholder="Job Title" id="job_ttle" name="job_ttle" required>
+        <label for="maj_inst"><b>Institution</b></label>
+        <input type = "text" placeholder="Institution" id="maj_inst" name="maj_inst" required>
 
-        <label for="job_desc"><b>Job Description</b></label>
-        <input class="bio" placeholder="Job Title" id="job_desc" name="job_desc" required>
+        <label for="maj_name"><b>Major</b></label>
+        <input type="text" placeholder="Enter Major" id="maj_name" name="maj_name" required>
 
 
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Upload Job</button>
+            <button type="submit" class="signupbtn">Add Major</button>
         </div>
     </div>
 </form>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Job Match - Post Job</title>
+    <title>Job Match - Achievements and Highlights</title>
     <link rel="stylesheet" href="../../../assets/tether/tether.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap-grid.min.css">
@@ -12,21 +12,23 @@
 </head>
 <body>
 
-<form method="post" action="../php/job-post.php" style="border:1px solid #ccc">
+<form method="post" action="achievements.php" style="border:1px solid #ccc">
     <div class="container">
-        <h1>Post Job</h1>
-        <p>What do we want? Jobs! When do we want them? Now! </p>
+        <h1>Achievements</h1>
+        <p>What are your highlights?</p>
         <hr>
 
-        <label for="job_ttle"><b>Job Title</b></label>
-        <input type = "text" placeholder="Job Title" id="job_ttle" name="job_ttle" required>
+        <label for="achievement"><b>Achievement</b></label>
+        <input type="text" placeholder="What was your achievement" id="achievement" name="achievement" required>
 
-        <label for="job_desc"><b>Job Description</b></label>
-        <input class="bio" placeholder="Job Title" id="job_desc" name="job_desc" required>
+        <label for="achievement_desc"><b>Achievement Description</b></label>
+        <input type="text" placeholder="What made it so special?" id="achievement_desc" name="achievement_desc" required>
 
+        <label for="achievement_yr"><b>Year Obtained</b></label>
+        <input type="number" placeholder="When was this special time?" id="achievement_yr" name="achievement_yr" required>
 
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Upload Job</button>
+            <button type="submit" class="signupbtn">Update Achievements</button>
         </div>
     </div>
 </form>

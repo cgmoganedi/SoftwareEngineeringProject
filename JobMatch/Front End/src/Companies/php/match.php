@@ -26,44 +26,69 @@ if ($majors_query->num_rows > 1)
     }
 }
 
-//Job description
-$job_description = Query('Job_Description','job_postings','1',$conn);
+//get all jobs posted.
+$all_job_descriptions = Query2('Job_Description','job_postings',$conn);
+$all_job_ids = Query2('ID','job_postings',$conn);
+print_r($all_job_ids);
+//for all job postings, find matching candidates and upload to database
+$cnt = 0;
 
-$job_description = strtoupper($job_description);
-
-//Matching skills
-$matching_skills = array();
-foreach ($skills as $item) {
-    if (strpos($job_description, $item) !== false) {
-        array_push($matching_skills,$item);
-    }
-}
-
-//Matching majors
-$matching_majors = array();
-foreach ($majors as $item) {
-    if (strpos($job_description, $item) !== false) {
-        array_push($matching_majors,$item);
-    }
-}
-
-//students matching on skills
-$s_m_m = Match($matching_majors,$conn,'ID','majors','Major');
-//s m m = students matching by majors by names
-$s_m_m_n = Match($s_m_m,$conn,'Name','users','ID');
-
-print_r(array_unique($s_m_m_n));
-
-function Match($data_array, $connection, $required_field, $table, $data_field)
-{
-    $result_array = array();
-    foreach ($data_array as $item){
-        $sql = "SELECT ".$required_field." FROM ".$table." WHERE ".$data_field." = '$item'";
-        $m_m_q = mysqli_query($connection,$sql);
-
-        while($row =  mysqli_fetch_assoc($m_m_q)) {
-            array_push($result_array, $row[$required_field]);
+foreach ($all_job_descriptions as $jobd) {
+    //Matching skills
+    $matching_skills = array();
+    foreach ($skills as $item) {
+        if (strpos($jobd, $item) !== false) {
+            array_push($matching_skills, $item);
         }
     }
-    return $result_array;
+
+//Matching majors
+    $matching_majors = array();
+    foreach ($majors as $item) {
+        if (strpos($jobd, $item) !== false) {
+            array_push($matching_majors, $item);
+        }
+    }
+//students matching on majors (by ID)
+    $s_m_m = Match($matching_majors, $conn, 'ID', 'majors', 'Major');
+//s m m = students matching by majors (by names)
+    $s_m_m_n = Match($s_m_m, $conn, 'Name', 'users', 'ID');
+
+//students matching on skills (by ID)
+    $s_m_s = Match($matching_skills, $conn, 'ID', 'user_skills', 'Skill');
+//students matching on skills (by Name)
+    $s_m_s_n = Match($s_m_s, $conn, 'Name', 'users', 'ID');
+
+//combine candidates matching by skill and majors
+    $all_id_matches = array_values(array_unique(array_merge($s_m_s, $s_m_m)));
+    $all_name_matches = array_values(array_unique(array_merge($s_m_s_n, $s_m_m_n)));
+
+//adding to all matches to data
+    for ($x = 0; $x < sizeof($all_id_matches) ; $x++) {
+    $sql = "INSERT INTO matches(Job,User,User_name) VALUES($all_job_ids[$cnt],'$all_id_matches[$x]','$all_name_matches[$x]')";
+
+        if (mysqli_query($conn,$sql) === TRUE) {
+        echo "Added user \n";
+        }
+        else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+    $cnt += 1;
 }
+
+
+//matching method
+    function Match($data_array, $connection, $required_field, $table, $data_field)
+    {
+        $result_array = array();
+        foreach ($data_array as $item) {
+            $sql = "SELECT " . $required_field . " FROM " . $table . " WHERE " . $data_field . " = '$item'";
+            $m_m_q = mysqli_query($connection, $sql);
+
+            while ($row = mysqli_fetch_assoc($m_m_q)) {
+                array_push($result_array, $row[$required_field]);
+            }
+        }
+        return array_values(array_unique($result_array));
+    }

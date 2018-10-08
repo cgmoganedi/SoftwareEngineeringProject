@@ -3,7 +3,8 @@ include_once 'connection.php';
 include_once 'things.php';
 session_start();
 $ID = $_SESSION['UserID'];
-$usr_skill = $_POST['usr_skill'];
+$maj_inst = $_POST['maj_inst'];
+$maj_name = $_POST['maj_name'];
 
 // Check connection
 if ($conn->connect_error) {
@@ -11,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "INSERT INTO user_skills (ID,Skill) VALUES ('$ID','$usr_skill')";
+$sql = "INSERT INTO majors (ID,Major) VALUES ('$ID','$maj_name')";
 
 if ($conn->query($sql) === TRUE) {
     $conn->close();
@@ -21,4 +22,6 @@ if ($conn->query($sql) === TRUE) {
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+
 

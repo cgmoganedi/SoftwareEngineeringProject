@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-    <title>Job Match - Post Job</title>
+    <title>Job Match - Biography</title>
     <link rel="stylesheet" href="../../../assets/tether/tether.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap-grid.min.css">
@@ -12,21 +12,17 @@
 </head>
 <body>
 
-<form method="post" action="../php/job-post.php" style="border:1px solid #ccc">
+<form method="post" action="biography.php" style="border:1px solid #ccc">
     <div class="container">
-        <h1>Post Job</h1>
-        <p>What do we want? Jobs! When do we want them? Now! </p>
+        <h1>Biography</h1>
+        <p>What would you like potential employers to know about you?</p>
         <hr>
 
-        <label for="job_ttle"><b>Job Title</b></label>
-        <input type = "text" placeholder="Job Title" id="job_ttle" name="job_ttle" required>
-
-        <label for="job_desc"><b>Job Description</b></label>
-        <input class="bio" placeholder="Job Title" id="job_desc" name="job_desc" required>
-
+        <label for="bio"><b>About You</b></label>
+        <input class="bio" placeholder="About You" id="bio" name="usr_bio" required>
 
         <div class="clearfix">
-            <button type="submit" class="signupbtn">Upload Job</button>
+            <button type="submit" class="signupbtn">Update Bio</button>
         </div>
     </div>
 </form>

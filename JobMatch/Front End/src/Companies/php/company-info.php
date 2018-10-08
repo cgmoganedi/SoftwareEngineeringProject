@@ -23,7 +23,9 @@ if ($result->num_rows > 0)
 {
     $comp_eml = Query('Email','companies',$ID,$conn);
     $sql = "UPDATE company_info SET  Company_Name = '$comp_name', Company_Email = '$comp_eml', Company_Number= '$comp_phone', Company_Country = '$comp_cntry', Company_Province = '$comp_province', Company_City = '$comp_city', Company_Website = '$comp_website' WHERE company_info.ID = '$ID'";
-
+    $name_update = "UPDATE companies SET Name = '$comp_name' WHERE companies.ID = '$ID'";
+    $conn->query($sql);
+    
     if ($conn->query($sql) === TRUE) {
         $conn->close();
         header('Location: /JobMatch/src/Companies/php/company-home.php');
