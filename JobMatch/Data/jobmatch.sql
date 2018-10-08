@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2018 at 11:46 PM
+-- Generation Time: Oct 08, 2018 at 05:26 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -46,7 +46,8 @@ CREATE TABLE `academic_info` (
 INSERT INTO `academic_info` (`ID`, `Institution`, `Qualification_Description`, `Qualification_Field`, `Start_Date`, `Completion_Date`, `Academic_Average`, `Grade_Scale`) VALUES
 (6, 'Wits', 'BSc Mathematics', 'Mathematics', '2018-01-12', '2018-11-30', '56%', 'percentage'),
 (10, 'Wits', 'Bsc Mathematics', 'Mathematics', '2018-01-12', '2018-11-30', '45%', 'percentage'),
-(11, 'Uj', 'BSc Mathematics', 'Science', '2018-01-12', '2018-11-30', '20%', 'percentage');
+(11, 'Uj', 'BSc Mathematics', 'Science', '2018-01-12', '2018-11-30', '20%', 'percentage'),
+(13, 'UCT', 'BSc General', 'Documentaion', '2018-03-07', '2018-10-26', '50', 'Percentage');
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,9 @@ CREATE TABLE `companies` (
 INSERT INTO `companies` (`ID`, `Email`, `Name`, `Password`) VALUES
 (1, 'google@gmail.com', 'Google', 'man'),
 (2, 'microsoft@outlook.com', 'Microsoft', 'man'),
-(3, 'mjomaneadmin@gmail.com', 'Mjomane Inc', 'mjo');
+(3, 'mjomaneadmin@gmail.com', 'Mjomane Inc', 'mjo'),
+(4, 'fnb@gmail.com', 'FNB', 'fnb'),
+(6, 'sbibles@gmail.com', 'Sammy and Sons Bibles', 'sam');
 
 -- --------------------------------------------------------
 
@@ -94,7 +97,9 @@ CREATE TABLE `company_info` (
 INSERT INTO `company_info` (`ID`, `Company_Name`, `Company_Email`, `Company_Number`, `Company_Province`, `Company_Country`, `Company_City`, `Company_Website`) VALUES
 (1, 'Google Maps', 'google@gmail.com', '0118902343', 'Namif', 'South Somalia', 'Mani', 'googlemaps.com'),
 (2, 'Microsoft', 'microsoft@outlook.com', '1234567890', 'Nami', 'South Sudan', 'Mani', 'google.com'),
-(3, 'mjo', 'mjomaneadmin@gmail.com', '1234567890', 'Nami', 'BRASIL', 'RIO', 'MJO.COM');
+(3, 'mjo', 'mjomaneadmin@gmail.com', '1234567890', 'Nami', 'BRASIL', 'RIO', 'MJO.COM'),
+(4, 'First Rand Banking', 'fnb@gmail.com', '0112567986', 'Manchester', 'Ghana', 'Jozi', 'fnb.co.za'),
+(6, 'Sammy and Sons Bibles', 'sbibles@gmail.com', '0112567986', 'GP', 'Ghana', 'Somewhere', 'sb.com');
 
 -- --------------------------------------------------------
 
@@ -113,7 +118,10 @@ CREATE TABLE `job_postings` (
 --
 
 INSERT INTO `job_postings` (`ID`, `Job_Title`, `Job_Description`) VALUES
-(1, 'Coder', 'The candidate will be making websites.\r\n\r\nSkills:\r\nCoding\r\nWriting\r\nPresenting\r\n\r\nEducation\r\nCandidate must have done one of the following:\r\nArts\r\nAnthropology\r\nHistory \r\nComputer Science\r\nHospitality studies');
+(1, 'Coder', 'The candidate will be making websites.\r\n\r\nSkills:\r\nCoding\r\nWriting\r\nPresenting\r\n\r\nEducation\r\nCandidate must have done one of the following:\r\nArts\r\nAnthropology\r\nHistory \r\nComputer Science\r\nHospitality studies'),
+(1, 'Tea Person', 'We will pay you a million. We promise. This is not a prank. lol.'),
+(2, 'Manager', 'We need people who did history and anthropology.'),
+(6, 'Church Minister', 'Candidate must be good at documentation.');
 
 -- --------------------------------------------------------
 
@@ -139,7 +147,20 @@ INSERT INTO `majors` (`ID`, `Major`) VALUES
 (6, 'Statistics'),
 (10, 'Hospitality studies'),
 (10, 'History'),
-(11, 'Coding');
+(11, 'Coding'),
+(13, 'Documentation');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `matches`
+--
+
+CREATE TABLE `matches` (
+  `Job` int(11) NOT NULL,
+  `User` int(11) NOT NULL,
+  `User_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -167,10 +188,12 @@ CREATE TABLE `personal_info` (
 --
 
 INSERT INTO `personal_info` (`ID`, `Title`, `Name`, `Surname`, `Country`, `Date_of_Birth`, `Id_Num`, `Email`, `Marital_Status`, `Gender`, `Race`, `City`) VALUES
-(6, 'Mr', 'Jomoman', 'khula', 'South Afrika', '1996-12-04', '1234567890123', 'jomo@gmail.com', '', 'Male', 'Black', 'rooftop'),
+(6, 'Ms', 'Sam', 'Cube', 'Nigeria', '2018-05-10', '1234567890123', 'sam@gmail.com', '', 'Male', 'White', 'Johannesburg'),
 (8, 'Prof', 'Garfield', 'Cudi', 'South Africa', '16-Jan-1997', '1234567890144', 'Garfield@gmail.com', '', 'Male', 'Black', 'Jozi'),
 (10, 'Mr', 'Jomo', 'Carter', 'South Afrika', '1996-12-04', '1234567890123', 'jomo@gmail.com', '', 'Male', 'Black', 'Diepkloof'),
-(11, 'Mr', 'Mzulu', 'khula', 'South Afrika', '1996-12-04', '1234567890123', 'mzulu@gmail.com', '', 'Male', 'Black', 'Soweto');
+(11, 'Mr', 'Mzulu', 'khula', 'South Afrika', '1996-12-04', '1234567890123', 'mzulu@gmail.com', '', 'Male', 'Black', 'Soweto'),
+(12, 'Mr', 'love', 'more', 'South Africa', '12/5/2018', '1234567890123', 'love@gmail.com', '', 'Male', 'Black', 'Johannesburg'),
+(13, 'Ms', 'Sam', 'Cube', 'Nigeria', '2018-05-10', '1234567890123', 'sam@gmail.com', '', 'Male', 'White', 'Johannesburg');
 
 -- --------------------------------------------------------
 
@@ -194,7 +217,8 @@ CREATE TABLE `professional_experience` (
 
 INSERT INTO `professional_experience` (`ID`, `Organisation`, `Country`, `Position`, `Start_Date`, `End_Date`, `Type_of_Involvement`) VALUES
 (6, 'Google', 'USA', '', '2018-12-14', '2020-01-05', 'Im not sur'),
-(11, 'Google', 'USA', '', '2018-12-14', '2020-01-05', 'Im not sure');
+(11, 'Google', 'USA', '', '2018-12-14', '2020-01-05', 'Im not sure'),
+(13, ' ', 'Other', '', '2018-10-19', '2018-10-19', ' ');
 
 -- --------------------------------------------------------
 
@@ -229,7 +253,9 @@ INSERT INTO `users` (`ID`, `Email`, `Password`, `Name`) VALUES
 (7, 'john1@gmail.com', 'man', 'JC'),
 (8, 'Garfield@gmail.com', 'man', 'Garfield'),
 (10, 'jomo@gmail.com', 'cat', 'Jomo'),
-(11, 'mzulu@gmail.com', 'mzulu', 'Mzulu');
+(11, 'mzulu@gmail.com', 'mzulu', 'Mzulu'),
+(12, 'love@gmail.com', 'love', 'love'),
+(13, 'sam@gmail.com', 'sam', 'Sam');
 
 -- --------------------------------------------------------
 
@@ -261,7 +287,8 @@ CREATE TABLE `user_biographies` (
 
 INSERT INTO `user_biographies` (`ID`, `User_Bio`) VALUES
 (6, 'I am a great guy but have depression and anger issues. I work best on drugs and I love being with my pet beetle, jimi.'),
-(11, 'I am a great guy but have depression and anger issues. I work best on drugs and I love being with my pet beetle, jimi.He likes cheetos. ');
+(11, 'I am a great guy but have depression and anger issues. I work best on drugs and I love being with my pet beetle, jimi.He likes cheetos. '),
+(13, 'I am Sam and I like God and Hillsong is my favourite thing in the world');
 
 -- --------------------------------------------------------
 
@@ -306,7 +333,8 @@ INSERT INTO `user_skills` (`ID`, `Skill`) VALUES
 (8, 'writing'),
 (8, 'accounting'),
 (7, 'eating'),
-(11, 'Fighting.');
+(11, 'Fighting.'),
+(13, 'Documentation');
 
 --
 -- Indexes for dumped tables
@@ -341,6 +369,13 @@ ALTER TABLE `job_postings`
 --
 ALTER TABLE `majors`
   ADD KEY `majors_academic_info_ID_fk` (`ID`);
+
+--
+-- Indexes for table `matches`
+--
+ALTER TABLE `matches`
+  ADD KEY `matches_job_postings_ID_fk` (`Job`),
+  ADD KEY `matches_users_ID_fk` (`User`);
 
 --
 -- Indexes for table `personal_info`
@@ -398,19 +433,19 @@ ALTER TABLE `user_skills`
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `company_info`
 --
 ALTER TABLE `company_info`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
@@ -438,7 +473,14 @@ ALTER TABLE `job_postings`
 -- Constraints for table `majors`
 --
 ALTER TABLE `majors`
-  ADD CONSTRAINT `majors_academic_info_ID_fk` FOREIGN KEY (`ID`) REFERENCES `academic_info` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `majors_users_ID_fk` FOREIGN KEY (`ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `matches`
+--
+ALTER TABLE `matches`
+  ADD CONSTRAINT `matches_job_postings_ID_fk` FOREIGN KEY (`Job`) REFERENCES `job_postings` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `matches_users_ID_fk` FOREIGN KEY (`User`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `personal_info`
