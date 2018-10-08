@@ -16,7 +16,7 @@ $sql = "INSERT INTO majors (ID,Major) VALUES ('$ID','$maj_name')";
 
 if ($conn->query($sql) === TRUE) {
     $conn->close();
-    header('Location: /JobMatch/src/Students/php/student-home.php');
+    header('Location: /JobMatch/src/student-home.php');
     exit();
 }
 else {

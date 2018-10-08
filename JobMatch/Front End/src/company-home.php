@@ -1,3 +1,7 @@
+<?php
+include_once 'company_data.php';
+?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -7,8 +11,8 @@
   <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/images-110x169.jpg" type="image/x-icon">
-  <meta name="description" content="Web Site Builder Description">
-  <title>student-home</title>
+  <meta name="description" content="Site Creator Description">
+  <title>company-home&nbsp;</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -23,7 +27,7 @@
   
 </head>
 <body>
-  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-c">
+  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-4">
 
     
 
@@ -60,7 +64,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/m">free site design templates</a></section><section class="cid-r5T4MXNwfI mbr-fullscreen mbr-parallax-background" id="header2-d">
+<section class="engine"><a href="https://mobirise.info/v">html templates</a></section><section class="cid-r5SVR3FrFr mbr-fullscreen mbr-parallax-background" id="header2-5">
 
     
 
@@ -69,10 +73,10 @@
     <div class="container align-center">
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">name of the student</h1>
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"><?php echo $name?></h1>
                 
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">their bio goes here</p>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary-outline display-4" href="https://mobirise.co">Edit your bio</a></div>
+                
+                
             </div>
         </div>
     </div>
@@ -83,20 +87,7 @@
     </div>
 </section>
 
-<section class="mbr-section article content10 cid-r5T4SliLrD" id="content10-e">
-    
-     
-
-    <div class="container">
-        <div class="inner-container" style="width: 66%;">
-            <hr class="line" style="width: 25%;">
-            <div class="section-text align-center mbr-white mbr-fonts-style display-5">the notifications goes here for the recommended jobs</div>
-            <hr class="line" style="width: 25%;">
-        </div>
-    </div>
-</section>
-
-<section class="features8 cid-r5T4Zu6Ozr mbr-parallax-background" id="features8-f">
+<section class="features8 cid-r5SVYQ6tdf mbr-parallax-background" id="features8-6">
 
     
 
@@ -108,34 +99,35 @@
 
             <div class="card  col-12 col-md-6 col-lg-4">
                 <div class="card-img">
-                    <span class="mbr-iconfont mbri-file"></span>
+                    <span class="mbr-iconfont mbri-pin"></span>
                 </div>
                 <div class="card-box align-center">
-                    <h4 class="card-title mbr-fonts-style display-7"><br><br><br>Personal Information</h4>
-                    <p class="mbr-text mbr-fonts-style display-7"></p><p>Please/Editinsert your personal information here to create your online CV....<span style="font-size: 1rem; background-color: initial;">&nbsp; &nbsp;</span></p><p></p>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-secondary display-4">Add/Edit Personal Details</a></div>
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        Company information</h4>
+                    <p class="mbr-text mbr-fonts-style display-7">Company Name,Company Phone....</p>
+                    <div class="mbr-section-btn text-center"><a href="http://localhost/JobMatch/src/Companies/php/company-info-form.php" class="btn btn-secondary display-4">Edit company info</a></div>
                 </div>
             </div>
 
             <div class="card  col-12 col-md-6 col-lg-4">
                 <div class="card-img">
-                    <span class="mbr-iconfont socicon-google-scholar socicon"></span>
+                    <span class="mbr-iconfont mbri-briefcase"></span>
                 </div>
                 <div class="card-box align-center">
-                    <h4 class="card-title mbr-fonts-style display-7">Academic information</h4>
-                    <p class="mbr-text mbr-fonts-style display-7">Please/Edit insert your Institution,Qualifications,Majors,Grade Scale...<br><br></p>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-secondary display-4">Add/Edit Academic Information</a></div>
+                    <h4 class="card-title mbr-fonts-style display-7">Job postings</h4>
+                    <p class="mbr-text mbr-fonts-style display-7">Job Title,Job Description....</p>
+                    <div class="mbr-section-btn text-center"><a href="http://localhost/JobMatch/src/Companies/html/post_job.html" class="btn btn-secondary display-4">Post Jobs</a></div>
                 </div>
             </div>
 
             <div class="card  col-12 col-md-6 col-lg-4">
                 <div class="card-img">
-                    <span class="mbr-iconfont mbri-laptop"></span>
+                    <span class="mbr-iconfont mbri-users"></span>
                 </div>
                 <div class="card-box align-center">
-                    <h4 class="card-title mbr-fonts-style display-7"><br><br><br>Experience</h4>
-                    <p class="mbr-text mbr-fonts-style display-7">Please/Edit insert your any previous experience,you might have....<br><br><br></p>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.co" class="btn btn-secondary display-4">Add/Edit previous or current experience</a></div>
+                    <h4 class="card-title mbr-fonts-style display-7">Recommended Students</h4>
+                    <p class="mbr-text mbr-fonts-style display-7">Student Name, Student profile....</p>
+                    <div class="mbr-section-btn text-center"><a href="page1.html" class="btn btn-secondary display-4">Recommended Students</a></div>
                 </div>
             </div>
 
@@ -144,7 +136,7 @@
     </div>
 </section>
 
-<section class="cid-r5T50VMuFf" id="footer1-g">
+<section class="cid-r5SW4Nr1JQ" id="footer1-7">
 
     
 
@@ -163,23 +155,21 @@
                 <h5 class="pb-3">
                     Address
                 </h5>
-                <p class="mbr-text">1 Jan Smuts Ave, Johannesburg, 2000 
+                <p class="mbr-text">1 Jan Smuts Ave, Johannesburg, 2000
 <br>University of the Witwatersrand, Johannesburg, Address</p>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="pb-3">
-                    Contacts
-                </h5>
-                <p class="mbr-text">&nbsp;@students.wits.ac.za 
-<br>1137682@students.wits.ac.za 
-<br>1257537@students.wits.ac.za 
+                <h5 class="pb-3">Contacts</h5>
+                <p class="mbr-text">&nbsp;@students.wits.ac.za
+<br>1137682@students.wits.ac.za
+<br>1257537@students.wits.ac.za
 <br>606494@students.wits.ac.za</p>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
                 <h5 class="pb-3">Group</h5>
-                <p class="mbr-text">Chuba Moganedi 
-<br>Thabang Khoza 
-<br>Sammy Maakwana 
+                <p class="mbr-text">Chuba Moganedi
+<br>Thabang Khoza
+<br>Sammy Maakwana
 <br>Ntokozo Gule</p>
             </div>
         </div>
@@ -208,7 +198,7 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.youtube.com/" target="_blank">
+                            <a href="https://www.youtube.com" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
                             </a>
                         </div>

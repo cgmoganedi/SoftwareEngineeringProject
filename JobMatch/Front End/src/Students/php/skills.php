@@ -15,7 +15,7 @@ $sql = "INSERT INTO user_skills (ID,Skill) VALUES ('$ID','$usr_skill')";
 
 if ($conn->query($sql) === TRUE) {
     $conn->close();
-    header('Location: /JobMatch/src/Students/php/student-home.php');
+    header('Location: /JobMatch/src/student-home.php');
     exit();
 }
 else {

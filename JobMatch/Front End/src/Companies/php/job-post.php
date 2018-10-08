@@ -16,7 +16,7 @@ $sql = "INSERT INTO job_postings (ID,Job_Title,Job_Description) VALUES ('$ID','$
 
 if ($conn->query($sql) === TRUE) {
     $conn->close();
-    header('Location: /JobMatch/src/Companies/php/company-home.php');
+    header('Location: /JobMatch/src/company-home.php');
     exit();
 }
 else {

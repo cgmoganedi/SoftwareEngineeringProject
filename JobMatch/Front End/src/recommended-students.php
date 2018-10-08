@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <!-- Site made with Mobirise Website Builder v4.8.4, https://mobirise.com -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.8.4, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/images-110x169.jpg" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Home</title>
+  <meta name="description" content="Site Generator Description">
+  <title>recommended-students</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -23,7 +22,7 @@
   
 </head>
 <body>
-  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-0">
+  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-3">
 
     
 
@@ -60,7 +59,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/w">html5 templates</a></section><section class="cid-qTkA127IK8 mbr-fullscreen mbr-parallax-background" id="header2-1">
+<section class="engine"><a href="https://mobirise.info/g">how to build a website for free</a></section><section class="cid-r5T1UF387S mbr-fullscreen mbr-parallax-background" id="header2-a">
 
     
 
@@ -69,12 +68,10 @@
     <div class="container align-center">
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">Welcome to Graduate Job Match</h1>
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">Recommended Students</h1>
                 
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">Students face a challenge of always applying to internships and jobs. And employers waste their time interviewing unqualified students for the job. Graduate Job Match is a web application which provides online application processing services for students and employers. This web application is quicker, easy and effective for the application process for graduates since students can
-<br>have very limited time to travel just to apply for jobs in their dream companies. This helps students to balance and not stress much on applying for jobs, and employers save time in processing hard copy cv’s or student profiles.</p>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-secondary-outline display-4" href="https://mobirise.com">Company Register</a>
-                    <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">Login</a> <a class="btn btn-md btn-primary-outline display-4" href="https://mobirise.com">Student Register</a></div>
+                <p class="mbr-text pb-3 mbr-fonts-style display-5">Balahlele lana ntwana&nbsp;</p>
+                
             </div>
         </div>
     </div>
@@ -85,7 +82,7 @@
     </div>
 </section>
 
-<section class="cid-qTkAaeaxX5" id="footer1-2">
+<section class="cid-r5T1WYVSDv" id="footer1-b">
 
     
 
@@ -95,8 +92,8 @@
         <div class="media-container-row content text-white">
             <div class="col-12 col-md-3">
                 <div class="media-wrap">
-                    <a href="http://www.wits.ac.za/">
-                        <img src="assets/images/images-174x267.jpg" alt="Mobirise" title="">
+                    <a href="https://mobirise.co/">
+                        <img src="assets/images/images-181x278.jpg" alt="Mobirise" title="">
                     </a>
                 </div>
             </div>
@@ -104,18 +101,26 @@
                 <h5 class="pb-3">
                     Address
                 </h5>
-                <p class="mbr-text">1 Jan Smuts Ave, Johannesburg, 2000
+                <p class="mbr-text">1 Jan Smuts Ave, Johannesburg, 2000 
 <br>University of the Witwatersrand, Johannesburg, Address</p>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
                 <h5 class="pb-3">
                     Contacts
                 </h5>
-                <p class="mbr-text">&nbsp;@students.wits.ac.za<br>1137682@students.wits.ac.za<br>1257537@students.wits.ac.za<br>606494@students.wits.ac.za</p>
+                <p class="mbr-text">@students.wits.ac.za
+<br>1137682@students.wits.ac.za
+<br>1257537@students.wits.ac.za
+<br>606494@students.wits.ac.za</p>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="pb-3">Group Names</h5>
-                <p class="mbr-text">Chuba Moganedi<br>Thabang Khoza<br>Sammy Maakwana<br>Ntokozo Gule</p>
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text">Chuba Moganedi
+<br>Thabang Khoza
+<br>Sammy Maakwana
+<br>Ntokozo Gule</p>
             </div>
         </div>
         <div class="footer-lower">
@@ -127,7 +132,7 @@
             <div class="media-container-row mbr-white">
                 <div class="col-sm-6 copyright">
                     <p class="mbr-text mbr-fonts-style display-7">
-                        © Copyright 2017 Graduate Job Match- All Rights Reserved
+                        © Copyright 2017 Graduate Job Match - All Rights Reserved
                     </p>
                 </div>
                 <div class="col-md-6">

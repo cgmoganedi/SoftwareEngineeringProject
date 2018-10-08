@@ -22,7 +22,7 @@ if ($student_result->num_rows == 1)
         $output[] = $row;
         session_start();
         $_SESSION['UserID'] = $output[0]['ID'];
-        header('Location: /JobMatch/src/Students/php/student-home.php');
+        header('Location: /JobMatch/src/student-home.php');
     }
 }
 elseif($company_result->num_rows == 1)
@@ -32,7 +32,7 @@ elseif($company_result->num_rows == 1)
         $output[] = $row;
         session_start();
         $_SESSION['UserID'] = $output[0]['ID'];
-        header('Location: /JobMatch/src/Companies/php/company-home.php');
+        header('Location: /JobMatch/src/company-home.php');
     }
 }
 else
